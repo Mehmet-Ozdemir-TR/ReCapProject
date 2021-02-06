@@ -13,7 +13,8 @@ namespace DataAccess.Concrete.IEntityFramework
             optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB; Database=ReCapProjectDb; Trusted_Connection=true");
         }
 
-        public DbSet<Car> Cars { get; set; }
+        //Tablodaki veriler ile Programdaki verileri eşleştirdiğimiz alan ! 
+        public DbSet<Car> Cars { get; set; } 
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Colors> Colors { get; set; }
     }
