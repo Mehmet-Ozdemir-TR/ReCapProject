@@ -16,15 +16,17 @@ namespace ConsoleUI
             carManager.Delete(new Car { Id = 2 });
             carManager.AddCar(new Car { Id = 2 ,ColorId = 2 , BrandId = 2 , ModelYear = "2014", DailyPrice = 365000 , Description = "Volvo"});
             carManager.Update(new Car { Id = 1 , BrandId = 2, ColorId = 4 , DailyPrice = 567895 , ModelYear = "2000" , Description = "Tofaşk" });
-            
-            foreach (var car in carManager.GetAll())
+
+            var result = carManager.GetAll();
+
+            foreach (var car in result.Data)
             {
                 Console.WriteLine(car.Description);
             }
 
             Console.WriteLine("**************************************************************************");
 
-            foreach (var car in carManager.GetCarDetails())
+            foreach (var car in carManager.GetCarDetails().Data)
             {
                 Console.WriteLine(car.BrandName + " " + car.ColorName + " renkli arabanın fiyatı=>" + car.DailyPrice);
             }
@@ -36,7 +38,7 @@ namespace ConsoleUI
             colorsManager.Add(new Colors { ColorsId = 1, ColorsName = "Eflatun" });
             colorsManager.Update(new Colors { ColorsId = 2 , ColorsName = "Mor"});
 
-            foreach (var colors in colorsManager.GetAll())
+            foreach (var colors in colorsManager.GetAll().Data)
             {
                 Console.WriteLine(colors.ColorsName);
             }
@@ -48,7 +50,7 @@ namespace ConsoleUI
             brandManager.Add(new Brand { BrandId = 3, BrandName = "Jeep" });
             brandManager.Update(new Brand { BrandId = 4, BrandName = "Nissan" });
 
-            foreach (var brand in brandManager.GetAll())
+            foreach (var brand in brandManager.GetAll().Data)
             {
                 Console.WriteLine(brand.BrandName);
             }
