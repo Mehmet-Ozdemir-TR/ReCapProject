@@ -6,6 +6,7 @@ namespace Business.Constants
 {
     public static class Message
     {
+        public static string GetAll = "Araçlar listelendi";
         public static string CarAdded = "Araç Eklendi ! ";
         public static string Invalid = "Araç ismi ve fiyatı geçersiz ! ";
         public static string DailyPrice = "Günlük Fiyat : ";

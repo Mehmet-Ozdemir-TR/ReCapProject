@@ -55,7 +55,9 @@ namespace Business.Concrete
         public IDataResult<List<Car>> GetAll()
         {
             //İş kodları
-            return new SuccessDataResult<List<Car>>(_carDal.GetAll());
+            
+            return new SuccessDataResult<List<Car>>(_carDal.GetAll() , Message.GetAll);
+            
         }
 
         public IDataResult<List<Car>> GetCarsByBrandId(int id)
