@@ -30,5 +30,6 @@ namespace Business.Constants
         public static string RentalInvalid = "Kiralamaya uygun değil 1 ";
         public static string CarImageLimitExceeded = "Car Image Limit Exceeded";
         public static string CarImageIsNotExists = "Car Image Is Not Exists";
+        public static string AuthorizationDenied = "...";
     }
 }
